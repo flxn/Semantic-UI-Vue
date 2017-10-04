@@ -1,3 +1,4 @@
+dist: trusty
 language: node_js
 node_js:
   - node
@@ -5,6 +6,8 @@ script:
   - npm test
   - npm run report-coverage
   - npm run build
+addons:
+  chrome: stable
 deploy:
   - provider: pages
     skip_cleanup: true
